@@ -13,12 +13,12 @@ function createWindow() {
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
       nodeIntegration: false,
-      contextIsolation: true,
-    },
+      contextIsolation: true
+    }
   });
 
   ipcMain.handle('ping', async (event: IpcMainEvent) => {
-    return "pong";
+    return 'pong';
   });
 
   if (isDevelopment) {

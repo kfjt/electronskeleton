@@ -1,23 +1,23 @@
 {
-    "compilerOptions": {
-      "target": "es2020",
-      "module": "commonjs",
-      "moduleResolution": "node",
-      "esModuleInterop": true,
-      "forceConsistentCasingInFileNames": true,
-      "strict": true,
-      "outDir": "dist/electron",
-      "baseUrl": ".",
-      "paths": {
-        "@/*": ["src/*"]
-      },
-      "sourceMap": true,
-      "allowJs": true,
-      "types": ["node"],
-      "jsx": "react",
-      "skipLibCheck": true,
-      "allowSyntheticDefaultImports": true,
-      "typeRoots": ["./node_modules/@types"]
+  "compilerOptions": {
+    "target": "es2020",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "outDir": "dist/electron",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
     },
-    "include": ["src/main/**/*"]
-  }
+    "sourceMap": true,
+    "allowJs": true,
+    "types": ["node"],
+    "jsx": "react",
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "typeRoots": ["./node_modules/@types"]
+  },
+  "include": ["src/main/**/*"]
+}

@@ -6,18 +6,18 @@ export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src'),
-    },
+      '@': path.resolve(__dirname, './src')
+    }
   },
   build: {
     outDir: 'dist/renderer',
     rollupOptions: {
       output: {
-        format: 'es', // rendererプロセスはESM
-      },
-    },
+        format: 'es' // rendererプロセスはESM
+      }
+    }
   },
   optimizeDeps: {
-    exclude: ['electron'],
-  },
+    exclude: ['electron']
+  }
 });
