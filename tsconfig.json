@@ -1,16 +1,4 @@
 {
-    "compilerOptions": {
-      "target": "es2016",
-      "module": "esnext",
-      "jsx": "react",
-      "strict": true,
-      "esModuleInterop": true,
-      "skipLibCheck": true,
-      "forceConsistentCasingInFileNames": true,
-      "allowSyntheticDefaultImports": true,
-          "baseUrl": ".",
-          "paths": {
-              "@/*": ["src/*"]
-          }
-    }
-  }
+  "files": [],
+  "references": [{ "path": "./tsconfig.node.json" }, { "path": "./tsconfig.web.json" }]
+}
