@@ -6,7 +6,7 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
-    "outDir": "dist/electron",
+    "outDir": "dist",
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]
@@ -19,5 +19,5 @@
     "allowSyntheticDefaultImports": true,
     "typeRoots": ["./node_modules/@types"]
   },
-  "include": ["src/main/**/*"]
+  "include": ["src/main/**/*", "src/preload/**/*"]
 }

@@ -12,11 +12,14 @@ export default defineConfig({
   build: {
     outDir: 'dist/renderer',
     rollupOptions: {
+      input: path.resolve(__dirname, 'src/renderer/index.html'),
       output: {
         format: 'es' // rendererプロセスはESM
       }
     }
   },
+  base: './',
+  assetsInclude: ['**/*.png', '**/*.ico'],
   optimizeDeps: {
     exclude: ['electron']
   }

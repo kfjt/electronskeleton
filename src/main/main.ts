@@ -1,12 +1,9 @@
-import { app, BrowserWindow, ipcMain, IpcMainEvent } from 'electron';
+import { app, BrowserWindow, ipcMain, IpcMainInvokeEvent } from 'electron';
 import path from 'path';
 
-// __dirname の修正 (ESM環境で必要)
-const __filename = new URL(import.meta.url).pathname;
-const __dirname = path.dirname(__filename);
 const isDevelopment = process.env.NODE_ENV === 'development';
 
-function createWindow() {
+const createWindow = () => {
   const mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
@@ -17,7 +14,7 @@ function createWindow() {
     }
   });
 
-  ipcMain.handle('ping', async (event: IpcMainEvent) => {
+  ipcMain.handle('ping', async (_: IpcMainInvokeEvent, ...__: any[]) => {
     return 'pong';
   });
 
@@ -27,7 +24,7 @@ function createWindow() {
   } else {
     mainWindow.loadFile(path.join(__dirname, '../renderer/index.html')); // rendererのindex.htmlをロード
   }
-}
+};
 
 app.whenReady().then(() => {
   createWindow();

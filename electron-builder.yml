@@ -1,5 +1,5 @@
 appId: com.electron.app
-productName: xxx
+productName: formeditor
 directories:
   buildResources: build
 files:
@@ -12,7 +12,7 @@ files:
 asarUnpack:
   - resources/**
 win:
-  executableName: xxx
+  executableName: formeditor
 nsis:
   artifactName: ${name}-${version}-setup.${ext}
   shortcutName: ${productName}

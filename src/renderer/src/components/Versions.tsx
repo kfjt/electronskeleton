@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-function Versions(): JSX.Element {
+const Versions = (): JSX.Element => {
   const [versions] = useState(window.electron.process.versions);
 
   return (
@@ -10,6 +10,6 @@ function Versions(): JSX.Element {
       <li className="node-version">Node v{versions.node}</li>
     </ul>
   );
-}
+};
 
 export default Versions;
