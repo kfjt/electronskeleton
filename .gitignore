@@ -1,5 +1,4 @@
-node_modules
 dist
-out
-.DS_Store
+node_modules
+tsconfig.node.tsbuildinfo
 *.log*

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 const Versions = (): JSX.Element => {
-  const [versions] = useState(window.electron.process.versions);
+  const [versions] = useState(window.api.versions);
 
   return (
     <ul className="versions">

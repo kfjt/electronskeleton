@@ -1,26 +1,18 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import path from 'path';
+import { resolve } from 'path';
 
 export default defineConfig({
+  root: resolve(__dirname, 'src/renderer'),
   plugins: [react()],
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './src')
+      '@': resolve(__dirname, 'src/renderer')
     }
   },
   build: {
-    outDir: 'dist/renderer',
-    rollupOptions: {
-      input: path.resolve(__dirname, 'src/renderer/index.html'),
-      output: {
-        format: 'es' // rendererプロセスはESM
-      }
-    }
+    outDir: resolve(__dirname, 'dist/renderer'),
+    emptyOutDir: true
   },
-  base: './',
-  assetsInclude: ['**/*.png', '**/*.ico'],
-  optimizeDeps: {
-    exclude: ['electron']
-  }
+  base: './'
 });

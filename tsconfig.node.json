@@ -1,8 +1,30 @@
 {
   "extends": "@electron-toolkit/tsconfig/tsconfig.node.json",
-  "include": ["src/main/**/*", "src/preload/**/*"],
   "compilerOptions": {
-    "composite": true,
-    "types": ["node"]
-  }
+    // Current Working Settings
+    "composite": false,
+    "outDir": "dist/electron",
+    "rootDir": "src/electron",
+    "types": ["node", "electron"],
+    "target": "es2020",
+    "module": "commonjs",
+
+    // Module System
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+
+    // Type Safety
+    "strict": true,
+    "skipLibCheck": true,
+
+    // Paths
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": ".",
+
+    // Development
+    "sourceMap": true
+  },
+  "include": ["src/electron/**/*"],
+  "exclude": ["node_modules", "dist"]
 }
